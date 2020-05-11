@@ -1,0 +1,81 @@
+/* div {
+	border: 1px solid black;
+} */
+#left_box {
+	flex-basis: 50%;
+	margin: 20px;
+}
+#right_box {
+	flex-basis: 50%;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	margin: 20px;
+}
+#flex_box {
+	display: flex;
+	width: 70%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.name_input,
+.mobile_input,
+.email_input {
+	margin: 15px;
+}
+#register_box {
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	width: 100%;
+	margin-top: 20px;
+}
+.view_name,
+.view_mobile,
+.view_email {
+	margin: 15px;
+}
+.center_text {
+	text-align: center;
+}
+input {
+	border: 1px solid black;
+	font-size: 20px;
+}
+label {
+	font-size: 20px;
+}
+#count {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+@media (max-width: 600px) {
+	/* #count {
+		margin-left: 0%;
+	} */
+	#flex_box {
+		margin-left: 0%;
+		display: flex;
+		flex-direction: column;
+	}
+	#left_box {
+		margin-left: 0px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	label {
+		font-size: 15px;
+	}
+	input {
+		font-size: 15px;
+	}
+	#register_box,
+	#right_box {
+		width: 80%;
+		margin-left: 4px;
+	}
+	#register_box {
+		margin-left: 12px;
+	}
+}

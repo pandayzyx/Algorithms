@@ -1,0 +1,37 @@
+div {
+	margin-top: 0px;
+	float: left;
+}
+form {
+	float: left;
+}
+button form {
+	padding: 8px 15px;
+}
+#forms,
+#btn {
+	margin-left: 10px;
+}
+#selector {
+	margin-left: 15px;
+}
+#gridbox {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto;
+	margin-left: 5%;
+	width: 30%;
+	grid-gap: 2px;
+}
+
+.class1 {
+	padding: 10px;
+	border: 1px solid black;
+	text-align: left;
+	width: 80%;
+	font-size: 20px;
+	color: brown;
+}
+body {
+	background-color: honeydew;
+}
