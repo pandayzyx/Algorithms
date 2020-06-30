@@ -126,7 +126,7 @@ class LinkedList {
 		}
 		this.size++;
 	}
-	printList(){
+	printList() {
 		let current = this.head;
 		let index = 0;
 		while (current) {
@@ -232,83 +232,124 @@ class LinkedList {
 			return true;
 		}
 	}
-	reverseLinkedlist(){
-		let current  = this.head
-		let prev  =  null
-		let before = null
+	reverseLinkedlist() {
+		let current = this.head;
+		let prev = null;
+		let before = null;
 		let after;
-		while(current){
-			prev = current
-			current = current.next
-			after = current
-			prev.next = before
-			before = prev
+		while (current) {
+			prev = current;
+			current = current.next;
+			after = current;
+			prev.next = before;
+			before = prev;
 		}
-		this.head = prev
-		
+		this.head = prev;
 	}
-	rotateLinkedList(k){
-		if(!this.head){
-			return 0
+	rotateLinkedList(k) {
+		if (!this.head) {
+			return 0;
 		}
-		let current  = this.head
-		let length = 0
-		let prev = null
-		while(current){
-		 prev = current
-		 current = current.next 
-		   length++ 
+		let current = this.head;
+		let length = 0;
+		let prev = null;
+		while (current) {
+			prev = current;
+			current = current.next;
+			length++;
 		}
-		let lastnode = prev
-		k = k%length
-		current = this.head
+		let lastnode = prev;
+		k = k % length;
+		current = this.head;
 		prev = null;
-		let counter = 0
-		let x  = length-1-k
-		while(counter<=x){
-		  prev = current
-		  current = current.next 
-		  counter++  
+		let counter = 0;
+		let x = length - 1 - k;
+		while (counter <= x) {
+			prev = current;
+			current = current.next;
+			counter++;
 		}
-		lastnode.next = this.head
-		this.head =  prev.next
-		prev.next = null
-		return this.head
+		lastnode.next = this.head;
+		this.head = prev.next;
+		prev.next = null;
+		return this.head;
 	}
-	NthNodeFromEnd(n){
-		let current  = this.head
-		let prev  = null
-		let length = 0
-		while(current){
-			current = current.next
-			length++
-		}
-		console.log(length)
-		current = this.head
-		let counter = 0
-		let x  = length-n+1
-		while(counter<x){
-			prev = current
-			current = current.next
-			counter++
-		}
-		console.log(prev)
+	count_1_2__0(){
+	   let zerocounter = 0;
+	   let onecounter = 0;
+	   let twocounter = 0;
+	   let current = this.head
+	   let prev = this.head
+	   while(current){
+		 prev =  current
+		 if(prev.element === 0){
+			 zerocounter++
+		 }
+		 else if(prev.element === 1){
+			 onecounter++
+		 }
+		 else{
+			 twocounter++
+		 }
+		 current = current.next
+	   }
+	   prev =   this.head
+	   current = this.head
+	   let a = 1
+	   let b=1;
+	   let c=1;
+	   while(current){
+		   prev  = current
+		   current  = current.next
+		 if(a<=zerocounter){
+		   prev.element = 0
+		   a++
+		 }
+		 else if(b<=onecounter){
+			 prev.element = 1
+			 b++
+		 }
+		 else if(c<=twocounter){
+			 prev.element = 2
+			 c++
+		 }
+		   
+	   }
+	   return this.head
 	}
-   
+	NthNodeFromEnd(n) {
+		let current = this.head;
+		let prev = null;
+		let length = 0;
+		while (current) {
+			current = current.next;
+			length++;
+		}
+		console.log(length);
+		current = this.head;
+		let counter = 0;
+		let x = length - n + 1;
+		while (counter < x) {
+			prev = current;
+			current = current.next;
+			counter++;
+		}
+		console.log(prev);
+	}
 }
 
 let list = new LinkedList();
 list.add(1);
 list.add(2);
-list.add(3);
-list.add(4);
-list.add(5);
-list.NthNodeFromEnd(2)
-
-
-
-
-
+list.add(0);
+list.add(0);
+list.add(2);
+console.log(list)
+list.count_1_2__0()
+console.log(list)
+list.printList()
+// list.removeElement(1)
+// list.NthNodeFromEnd(2);
 
 //list.add(3)
 // list.insertAt(5,1);
