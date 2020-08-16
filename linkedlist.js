@@ -245,6 +245,7 @@ class LinkedList {
 			before = prev;
 		}
 		this.head = prev;
+		console.log(this.head)
 	}
 	rotateLinkedList(k) {
 		if (!this.head) {
@@ -341,19 +342,24 @@ class LinkedList {
 let list = new LinkedList();
 list.add(1);
 list.add(2);
-list.add(0);
-list.add(0);
-list.add(2);
-console.log(list)
-list.count_1_2__0()
-console.log(list)
-list.printList()
+list.add(3);
+list.add(4);
+list.add(5);
+list.middleList()
+// console.log(list)
+// list.reverseLinkedlist()
+// console.log(list)
+//list.NthNodeFromEnd()
+
+// list.count_1_2__0()
+// console.log(list)
+// list.printList()
 // list.removeElement(1)
 // list.NthNodeFromEnd(2);
 
 //list.add(3)
 // list.insertAt(5,1);
-//list.middleList()
+
 //console.log(list);
 // list.printList()
 //console.log(list.isEmpty())
